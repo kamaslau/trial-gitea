@@ -1,6 +1,8 @@
 # trial-gitea
 
-## docker 镜像源配置
+[官方网站](https://docs.gitea.com/)
+
+## 【可选】docker 镜像源配置
 
 ### 下载配置文件
 
@@ -41,8 +43,20 @@ docker info
 
 _Registry Mirrors_ 部分应当有相应内容。
 
-## 拉取 Gitea 镜像
+## 启动服务
 
 ```bash
-docker pull gitea/gitea:latest
+docker compose up -d
 ```
+
+# 初始化
+
+GUI [http://localhost:3000](http://localhost:3000)
+
+## 注册管理员账户
+
+[注册第一个用户](http://localhost:3000/user/sign_up)，该用户将自动成为管理员。
+
+## 常用操作
+
+- [迁入代码库](http://localhost:3000/repo/migrate)
