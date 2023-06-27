@@ -60,3 +60,4 @@ GUI [http://localhost:3000](http://localhost:3000)
 ## 常用操作
 
 - [迁入代码库](http://localhost:3000/repo/migrate)
+- [镜像/推送同步](https://docs.gitea.com/next/usage/repo-mirror/)
