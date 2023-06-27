@@ -55,7 +55,7 @@ GUI [http://localhost:3000](http://localhost:3000)
 
 ## 注册管理员账户
 
-[注册第一个用户](http://localhost:3000/user/sign_up)，该用户将自动成为管理员。
+若未在初始化时配置管理员信息，则[注册第一个用户](http://localhost:3000/user/sign_up)后，该用户将自动成为管理员。
 
 ## 常用操作
 
