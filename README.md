@@ -1,6 +1,11 @@
 # trial-gitea
 
 [官方网站](https://docs.gitea.com/)
+[安装说明](https://docs.gitea.com/installation/install-with-docker-rootless)
+
+# 默认服务路径
+
+GUI [http://localhost:3000](http://localhost:3000)
 
 ## 【可选】docker 镜像源配置
 
@@ -48,10 +53,6 @@ _Registry Mirrors_ 部分应当有相应内容。
 ```bash
 docker compose up -d
 ```
-
-# 初始化
-
-GUI [http://localhost:3000](http://localhost:3000)
 
 ## 注册管理员账户
 

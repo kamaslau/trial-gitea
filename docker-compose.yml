@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 
 networks:
   gitea:
@@ -12,12 +12,18 @@ services:
     image: gitea/gitea
     restart: always
     ports:
+      # Default ports
       - "3000:3000"
-      - "222:22"
+      - "2222:2222"
+      # [Optional] Custom ports
+      # - "8081:3000" # Should match Nginx conf
     networks:
       - gitea
     volumes:
-      - gitea_data:/data
+      - gitea_data:/var/lib/gitea
+      - ./config:/etc/gitea
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
     environment:
       - USER_UID=1000
       - USER_GID=1000
