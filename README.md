@@ -62,3 +62,20 @@ docker compose up -d
 
 - [迁入代码库](http://localhost:3000/repo/migrate)
 - [镜像/推送同步](https://docs.gitea.com/next/usage/repo-mirror/)
+
+## CI/CD/Runner(s)
+
+- https://docs.gitea.com/usage/actions/quickstart
+- https://gitea.com/gitea/act_runner/src/branch/main/README.md#run-with-docker
+
+先从管理后台获取 `GITEA_RUNNER_REGISTRATION_TOKEN` 备用： https://your_gitea.com/admin/actions/runners
+
+```bash
+docker run --name gitea-runner \
+-d \
+--restart always \
+  -e GITEA_INSTANCE_URL=https://your_gitea.com \
+  -e GITEA_RUNNER_REGISTRATION_TOKEN=your_token \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitea/act_runner
+```
