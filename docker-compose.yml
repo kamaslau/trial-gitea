@@ -9,7 +9,7 @@ volumes:
 
 services:
   gitea:
-    image: gitea/gitea
+    image: gitea/gitea:latest-rootless
     restart: always
     ports:
       # Default ports
