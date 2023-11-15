@@ -9,6 +9,7 @@ volumes:
 
 services:
   gitea:
+    container_name: gitea
     image: gitea/gitea:latest-rootless
     restart: always
     ports:
