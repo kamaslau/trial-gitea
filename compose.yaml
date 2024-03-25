@@ -10,14 +10,11 @@ services:
     # image: gitea/gitea:latest-rootless
     image: gitea/gitea:latest
     restart: always
+    env_file: .env
     ports:
-      # Default ports
-      - 3000:3000
-      - 2222:2222
-      # [Optional] Custom ports, should match Nginx/gateway confs
-      # Remember to comment out the above defaults
-      # - 8081:3000
-      # - 8222:2222
+      # Should match Nginx/gateway confs
+      - ${PORT-3000}:3000
+      - ${PORT_SSH-2222}:2222
     networks:
       - gitea
     volumes:

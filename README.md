@@ -53,8 +53,8 @@ _Registry Mirrors_ 部分应当有相应内容。
 ### Start with [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
-# [Optional] Edit configs
-nano app.ini
+# Initiate .env file
+cp .env_template .env
 # Start services
 docker compose up -d
 ```
