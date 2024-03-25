@@ -21,7 +21,7 @@ services:
       - gitea
     volumes:
       - gitea_data:/data
-      - ./config:/etc/gitea
+      - ./config:/data/gitea/conf
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
