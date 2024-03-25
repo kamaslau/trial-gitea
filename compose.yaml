@@ -12,16 +12,17 @@ services:
     restart: always
     ports:
       # Default ports
-      - "3000:3000"
-      - "2222:2222"
+      - 3000:3000
+      - 2222:2222
       # [Optional] Custom ports, should match Nginx/gateway confs
       # Remember to comment out the above defaults
-      # - "8081:3000"
+      # - 8081:3000
+      # - 8222:2222
     networks:
       - gitea
     volumes:
       - gitea_data:/data
-      - ./config:/data/gitea/conf
+      - ./config:/etc/gitea/conf
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
