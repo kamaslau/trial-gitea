@@ -20,7 +20,7 @@ services:
     networks:
       - gitea
     volumes:
-      - gitea_data:/var/lib/gitea
+      - gitea_data:/data
       - ./config:/etc/gitea
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro

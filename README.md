@@ -50,7 +50,20 @@ _Registry Mirrors_ 部分应当有相应内容。
 
 ## 启动服务
 
+### Start with [Docker Compose](https://docs.docker.com/compose/)
+
 ```bash
+# [Optional] Edit configs
+nano app.ini
+# Start services
+docker compose up -d
+```
+
+Update existing composed containers with latest images:
+
+```bash
+docker compose pull && \
+docker compose down && \
 docker compose up -d
 ```
 
