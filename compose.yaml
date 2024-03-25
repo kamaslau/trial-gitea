@@ -1,8 +1,5 @@
-version: "3.9"
-
 networks:
   gitea:
-    external: false
 
 volumes:
   gitea_data:
@@ -10,14 +7,16 @@ volumes:
 services:
   gitea:
     container_name: gitea
-    image: gitea/gitea:latest-rootless
+    # image: gitea/gitea:latest-rootless
+    image: gitea/gitea:latest
     restart: always
     ports:
       # Default ports
       - "3000:3000"
       - "2222:2222"
-      # [Optional] Custom ports
-      # - "8081:3000" # Should match Nginx conf
+      # [Optional] Custom ports, should match Nginx/gateway confs
+      # Remember to comment out the above defaults
+      # - "8081:3000"
     networks:
       - gitea
     volumes:
