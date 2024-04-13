@@ -7,8 +7,8 @@ volumes:
 services:
   gitea:
     container_name: gitea
-    # image: gitea/gitea:latest-rootless
-    image: gitea/gitea:latest
+    image: gitea/gitea:latest-rootless
+    # image: gitea/gitea:latest
     restart: always
     env_file: .env
     ports:
